@@ -1,0 +1,106 @@
+/* Stylisation du formulaire */
+form {
+    /* Display */
+    display: grid;
+    place-items: center stretch;
+    gap: 1rem;
+
+    /* Bordures */
+    margin:0 7%;
+    padding:40px;
+    padding-right:50px;
+    border-radius: 15px;
+
+    /* Background */
+    background-color: rgba(255,255,255,0.6); /* Fallback pour les navigateurs non pris en charge */;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Stylisation des champs du formulaire */
+fieldset {
+    /* Display */
+    display: grid;
+    gap: 1rem;
+
+    /* Bordures */
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Stylisation de la légende du formulaire  */
+legend {
+    /* Display */
+    display: grid;
+    text-align: center;
+    place-items: center;
+
+    /* Police */
+    font-size: 2rem;
+
+    /* Dimensions */
+    width: 100%;
+    height: auto;
+
+    /* Bordures */
+    padding:1rem 0;
+    margin-bottom:1rem;
+    border-radius: 15px;
+
+    /* Background */
+    background-color: rgba(255,255,255,0.8);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Stylisations des labels */
+label {
+    /* Display */
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    align-self: start;
+
+    /* Bordures */
+    border-radius: 15px;
+    padding: 0.5rem;
+
+    /* Background */
+    background-color: rgba(255,255,255,0.8); /* Fallback pour les navigateurs non pris en charge */;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    /* Largeur minimale */
+    min-width: 150px;
+}
+
+/* Stylisation des input et du textarea */
+input, textarea {
+    /* Bordures */
+    border:none;
+    border-radius: 15px;
+    padding: 0.5rem;
+
+    /* Background */
+    background-color: rgba(255,255,255,0.8); /* Fallback pour les navigateurs non pris en charge */;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Stylisation des div dans le fieldset */
+fieldset>div {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Stylisation de la dernière div */
+div:last-of-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    width: 100%;
+
+}

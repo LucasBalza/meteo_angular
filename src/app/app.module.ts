@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainComponent } from './main/main.component';
+import { FormComponent } from './form/form.component';
+import { TodayComponent } from './today/today.component';
+import { NextdaysComponent } from './nextdays/nextdays.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    FormComponent,
+    TodayComponent,
+    NextdaysComponent
   ],
   imports: [
     BrowserModule,

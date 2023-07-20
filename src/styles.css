@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+/* Stylisation du body */
+body {
+    /* Display */
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+
+    /* Dimensions */
+    width: auto;
+    height: auto;
+
+    /* Bordures */
+    margin: 2% 4%;
+
+    /* Background */
+    background-color: #2980b9; /* Fallback pour les navigateurs non pris en charge */
+    background-image: linear-gradient(to bottom right, #2980b9, #6dd5fa);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

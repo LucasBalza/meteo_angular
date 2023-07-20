@@ -1,0 +1,42 @@
+/* Stylisation du titre h1 */
+h1 {
+    /* Police */
+    font-family: CaviarDreams;
+    font-weight: bold;
+    font-size:3rem;
+    color: white;
+
+    /* Bordures */
+    margin:0;
+}
+
+nav {
+    /* Display */
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    /* Bordures */
+    margin:0;
+}
+
+nav a {
+    padding: 1rem;
+    text-decoration: none;
+    margin: 2rem;
+    display: inline-block;
+    background-color: #e8e8e8;
+    color: #000000;
+    border-radius: 4px;
+
+    /* Dimensions */
+    width: 150px;
+  }
+  
+  nav a:hover {
+    color: white;
+    background-color: #215368;
+  }
+  nav a:active {
+    background-color: black;
+  }
