@@ -1,25 +1,31 @@
-<h2>PRÉVISIONS</h2>
-<section class="row">
-    <h3>Prévisionnel à 4 jours</h3>
-    <!-- Prévoir de remplacer ces 4 itérations par une boucle ngFor -->
-    <div id="1" class="container zoom">
-        <div class="nameday">JOUR+1</div>
-        <div class="weather">Temps</div>
-        <div class="temperature">Température moyenne</div>
-    </div>
-    <div id="2" class="container zoom">
-        <div class="nameday">JOUR+2</div>
-        <div class="weather">Temps</div>
-        <div class="temperature">Température moyenne</div>
-    </div>
-    <div id="3" class="container zoom">
-        <div class="nameday">JOUR+3</div>
-        <div class="weather">Temps</div>
-        <div class="temperature">Température moyenne</div>
-    </div>
-    <div id="4" class="container zoom">
-        <div class="nameday">JOUR+4</div>
-        <div class="weather">Temps</div>
-        <div class="temperature">Température</div>
-    </div>
-</section>
+<main>
+    <h2>PRÉVISIONS</h2>
+    <section class="row">
+        <h3>Prévisionnel à 4 jours</h3>
+        <!-- Prévoir de remplacer ces 4 itérations par une boucle ngFor -->
+        <div id="1" class="container zoom">
+            <div class="bold">{{weatherData?.fcst_day_1?.day_long}}</div>
+            <img [src]="weatherData?.fcst_day_1?.icon_big" alt="Weather Icon">
+            <div>{{weatherData?.fcst_day_1?.condition}}</div>
+            <div class="bold">{{weatherData?.fcst_day_1?.tmin}} °C - {{weatherData?.fcst_day_1?.tmax}} °C</div>
+        </div>
+        <div id="2" class="container zoom">
+            <div class="bold">{{weatherData?.fcst_day_2?.day_long}}</div>
+            <img [src]="weatherData?.fcst_day_2?.icon_big" alt="Weather Icon">
+            <div>{{weatherData?.fcst_day_2?.condition}}</div>
+            <div class="bold">{{weatherData?.fcst_day_2?.tmin}} °C - {{weatherData?.fcst_day_2?.tmax}} °C</div>
+        </div>
+        <div id="3" class="container zoom">
+            <div class="bold">{{weatherData?.fcst_day_3?.day_long}}</div>
+            <img [src]="weatherData?.fcst_day_3?.icon_big" alt="Weather Icon">
+            <div>{{weatherData?.fcst_day_3?.condition}}</div>
+            <div class="bold">{{weatherData?.fcst_day_3?.tmin}} °C - {{weatherData?.fcst_day_3?.tmax}} °C</div>
+        </div>
+        <div id="4" class="container zoom">
+            <div class="bold">{{weatherData?.fcst_day_4?.day_long}}</div>
+            <img [src]="weatherData?.fcst_day_4?.icon_big" alt="Weather Icon">
+            <div>{{weatherData?.fcst_day_4?.condition}}</div>
+            <div class="bold">{{weatherData?.fcst_day_4?.tmin}} °C - {{weatherData?.fcst_day_4?.tmax}} °C</div>
+        </div>
+    </section>
+</main>

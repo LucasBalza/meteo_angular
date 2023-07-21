@@ -1,3 +1,14 @@
+/* Import des polices d'écriture */
+@font-face {
+    font-family: Quicksand-normal;
+    src: url('./assets/font/Quicksand-Regular.otf');
+}
+
+* {
+    font-family: Quicksand-normal;
+}
+
+
 /* Stylisation du body */
 body {
     /* Display */

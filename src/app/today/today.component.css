@@ -1,28 +1,173 @@
-h3 {
-    display: none;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Bordures */
+  margin: 1%;
 }
 
-/* Stylisation de ma classe row */
-.row {
+h3 {
+  display: none;
+}
+
+section:first-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* Dimensions */
+  width: 100%;
+
+  /* Bordures */
+  margin: 1%;
+}
+
+section > div.row {
+  /* Display */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  /* Dimensions */
+  width: 100%;
+}
+
+section > div.column {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Bordures */
+  margin: 0 2%;
+
+  /* Dimensions */
+  width: 100%;
+}
+
+section:first-of-type > div > div {
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Bordures */
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin: 10px;
+
+  /* Background */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fallback pour les navigateurs non pris en charge */
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  /* Largeur minimale */
+  width: 33%;
+  height: 2rem;
+}
+
+section:last-of-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  /* Dimensions */
+  width: 100%;
+
+  /* Bordures */
+  margin: 0;
+}
+
+section:last-of-type > div {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Bordures */
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin: 10px;
+
+  /* Background */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fallback pour les navigateurs non pris en charge */
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  /* Largeur minimale */
+  width: 50%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Stylisation de ma classe zoom */
+.zoom {
+  /* Animation */
+  transition: transform 0.3s ease;
+}
+
+/* Stylisation de l'évènement hover sur la classe zoom */
+.zoom:hover {
+  /* Animation */
+  transform : scale(1.02);
+}
+
+img {
+  /* Bordures */
+  margin:15px;
+}
+
+/* Media Query pour les écrans de téléphone */
+@media only screen and (max-width: 767px) {
+  section > div.row {
     /* Display */
-    display:flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column;
+
+    /* Dimensions */
+    width: 90%;
+  }
+
+  section:first-of-type > div > div {
+    /* Dimensions */
+    width: 100%;
 
     /* Bordures */
-    padding: 1rem;
-}
+    margin: 5px 15px;
+  }
 
-section>div {
-    display: inline-block;
-    width: 200px;
-    gap: 3rem;
-    flex-wrap: wrap;
+  section:last-of-type {
+    /* Display */
+    flex-direction: column;
+  }
 
-    /* Background */
-    background-color: rgba(255,255,255,0.8); /* Fallback pour les navigateurs non pris en charge */;
-    background-repeat: no-repeat;
-    background-size: 100%;
+  section:last-of-type > div {
+    /* Display */
+    flex-direction: column;
+
+    /* Dimensions */
+    width: 90%;
+  }
 }

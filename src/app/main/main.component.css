@@ -1,4 +1,4 @@
-app-today {
+app-today, app-nextdays {
     /* Display */
     display:flex;
     flex-direction: column;

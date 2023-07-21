@@ -6,9 +6,8 @@ form {
     gap: 1rem;
 
     /* Bordures */
-    margin:0 7%;
+    margin:0 4%;
     padding:40px;
-    padding-right:50px;
     border-radius: 15px;
 
     /* Background */
@@ -38,6 +37,7 @@ legend {
 
     /* Police */
     font-size: 2rem;
+    font-weight: bold;
 
     /* Dimensions */
     width: 100%;
@@ -90,6 +90,7 @@ input, textarea {
 
 /* Stylisation des div dans le fieldset */
 fieldset>div {
+    /* Display */
     display: grid;
     grid-template-columns: 1fr 5fr;
     gap: 1rem;
@@ -98,9 +99,54 @@ fieldset>div {
 
 /* Stylisation de la dernière div */
 div:last-of-type {
+    /* Display */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
+
+    /* Dimensions */
     width: 100%;
 
+}
+
+/* Stylisation de ma classe zoom */
+.dezoom {
+    /* Animation */
+    transition: transform 0.3s ease;
+}
+
+/* Stylisation de l'évènement hover sur la classe zoom */
+.dezoom:hover {
+    /* Animation */
+    transform : scale(0.95);
+}
+
+
+/* Pour les écrans de téléphone */
+@media only screen and (max-width: 767px) {
+    
+    legend {
+        /* Police */
+        font-size: 15px;
+    }
+
+    /* Stylisation des div dans le fieldset */
+    fieldset>div {
+        /* Display */
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    fieldset>div {
+        /* Display */
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        align-items: center;
+
+        /* Bordures */
+        padding:0;
+    }
 }

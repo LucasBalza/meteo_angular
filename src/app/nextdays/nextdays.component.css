@@ -1,0 +1,127 @@
+main {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Bordures */
+  margin: 1%;
+}
+
+h3 {
+  /* Display */
+  display: none;
+}
+
+section {
+  /* Display */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  /* Dimensions */
+  width: 100%;
+
+  /* Bordures */
+  margin: 1%;
+}
+
+section > div {
+  /* Display */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Bordures */
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin: 15px;
+
+  /* Background */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fallback pour les navigateurs non pris en charge */
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  /* Dimensions */
+  width: 25%;
+}
+
+section > div > div {
+  /* Display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Bordures */
+  border-radius: 15px;
+  padding: 0.5rem;
+  margin: 10px;
+
+  /* Largeur minimale */
+  width: 100%;
+  height: auto;
+}
+
+/* Stylisation de ma classe zoom */
+.zoom {
+  /* Animation */
+  transition: transform 0.3s ease;
+}
+
+/* Stylisation de l'évènement hover sur la classe zoom */
+.zoom:hover {
+  /* Animation */
+  transform: scale(1.02);
+}
+
+.bold {
+  /* Police */
+  font-weight: bold;
+}
+
+img {
+  /* Bordures */
+  margin: 15px;
+}
+
+/* Media Query pour les écrans de téléphone */
+@media only screen and (max-width: 767px) {
+  section > div.row {
+    /* Display */
+    flex-direction: column;
+
+    /* Dimensions */
+    width: 90%;
+  }
+
+  section:first-of-type > div > div {
+    /* Dimensions */
+    width: 100%;
+
+    /* Bordures */
+    margin: 5px 15px;
+  }
+
+  section:last-of-type {
+    /* Display */
+    flex-direction: column;
+  }
+
+  section:last-of-type > div {
+    /* Display */
+    flex-direction: column;
+
+    /* Dimensions */
+    width: 90%;
+  }
+}

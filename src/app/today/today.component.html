@@ -1,24 +1,32 @@
-<h2>AUJOURD'HUI</h2>
-<section class="row">
-    <h3>Informations</h3>
-    <div id="town" class="box zoom">Ville</div>
-    <div id="date" class="box zoom">Date</div>
-    <div id="time" class="box zoom">Heure</div>
-    <div id="saintDay" class="box zoom">Saint du jour</div>
-    <div id="sunriseTime" class="box zoom">Heure de lever du soleil</div>
-    <div id="sunsetTime" class="box zoom">Heure de coucher du soleil</div>
-</section>
-
-<section>
-    <h3>La journée</h3>
-    <div class="container zoom">
-        <div>MATIN</div>
-        <div id="morningWeatherday_0">Temps</div>
-        <div id="morningTemperatureMinday_0">Température minimale</div>
-    </div>
-    <div class="container zoom">
-        <div>APRÈS-MIDI</div>
-        <div id="afternoonWeatherday_0">Temps</div>
-        <div id="afternoonTemperatureMaxday_0">Température maximale</div>
-    </div>
-</section>
+<main>
+    <h2>AUJOURD'HUI</h2>
+    <section>
+        <h3>Informations</h3>
+        <div class="row">
+            <div class="zoom">{{ weatherData?.city_info?.name }}</div>
+            <div class="zoom">{{ currentDateTime | date:'dd/MM/yyyy' }}</div>
+            <div class="zoom">{{ currentDateTime | date:'HH:mm:ss' }}</div>
+        </div>
+        <div class="row">
+            <div class="zoom">On fête la Saint<br> {{ firstMajorSaint }}</div>
+            <div class="zoom">Heure de lever du soleil :<br> {{ weatherData?.city_info?.sunrise }}</div>
+            <div class="zoom">Heure de coucher du soleil :<br> {{ weatherData?.city_info?.sunset }}</div>
+        </div>
+    </section>
+    
+    <section>
+        <h3>La journée</h3>
+        <div class="column zoom">
+            <div class="bold">MATIN</div>
+            <img [src]="weatherData?.fcst_day_0?.icon_big" alt="Weather Icon">
+            <div>{{weatherData?.fcst_day_0?.condition}}</div>
+            <div class="bold">{{weatherData?.fcst_day_0?.tmin}} °C</div>
+        </div>
+        <div class="column zoom">
+            <div class="bold">APRÈS-MIDI</div>
+            <img [src]="weatherData?.fcst_day_0?.icon_big" alt="Weather Icon">
+            <div>{{weatherData?.fcst_day_0?.condition}}</div>
+            <div class="bold">{{weatherData?.fcst_day_0?.tmax}} °C</div>
+        </div>
+    </section>
+</main>
